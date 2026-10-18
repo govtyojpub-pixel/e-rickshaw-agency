@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b0f">
+
+<title>Amarjeet Electricals | E-Rickshaw Centre</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{scroll-behavior:smooth}
+
+:root{
+  --orange:#ff6b00;
+  --orange2:#ff9a3d;
+  --dark:#080b0f;
+  --dark2:#10151b;
+  --card:#151b22;
+  --white:#ffffff;
+  --muted:#aab2bd;
+}
+
+body{
+  font-family:'Manrope',sans-serif;
+  background:#080b0f;
+  color:white;
+  overflow-x:hidden;
+}
+
+a{text-decoration:none;color:inherit}
+
+/* NAVBAR */
+
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,8,12,.78);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.brand{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;
+  font-size:20px;
+  letter-spacing:-.5px;
+}
+
+.brand span{
+  display:block;
+  font-family:'Manrope';
+  font-size:9px;
+  color:var(--orange);
+  letter-spacing:3px;
+  margin-top:3px;
+}
+
+.navlinks{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.navlinks a{
+  font-size:13px;
+  color:#d7dce1;
+  transition:.3s;
+}
+
+.navlinks a:hover{color:var(--orange)}
+
+.navbtn{
+  padding:11px 19px;
+  border:1px solid var(--orange);
+  border-radius:50px;
+  color:white!important;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+  radial-gradient(circle at 80% 45%,rgba(255,107,0,.18),transparent 28%),
+  radial-gradient(circle at 20% 80%,rgba(255,107,0,.06),transparent 30%),
+  #080b0f;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:700px;
+  height:700px;
+  border:1px solid rgba(255,255,255,.04);
+  border-radius:50%;
+  right:-180px;
+  top:100px;
+}
+
+.hero-grid{
+  width:100%;
+  max-width:1400px;
+  margin:auto;
+  padding:140px 6% 80px;
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  align-items:center;
+  gap:30px;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--orange2);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+.eyebrow:before{
+  content:"";
+  width:35px;
+  height:2px;
+  background:var(--orange);
+}
+
+.hero h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(46px,6vw,86px);
+  line-height:.95;
+  letter-spacing:-4px;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:transparent;
+  -webkit-text-stroke:1px var(--orange);
+}
+
+.hero p{
+  color:var(--muted);
+  max-width:570px;
+  font-size:16px;
+  line-height:1.8;
+  margin-bottom:32px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+}
+
+.primary,.secondary{
+  padding:15px 25px;
+  border-radius:7px;
+  font-size:13px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.primary{
+  background:linear-gradient(135deg,var(--orange),#ff8b28);
+  color:white;
+  box-shadow:0 10px 30px rgba(255,107,0,.25);
+}
+
+.secondary{
+  border:1px solid #3b424b;
+  color:white;
+}
+
+.primary:hover,.secondary:hover{
+  transform:translateY(-3px);
+}
+
+.vehicle{
+  position:relative;
+  animation:float 4s ease-in-out infinite;
+}
+
+.vehicle img{
+  width:100%;
+  max-height:600px;
+  object-fit:contain;
+  position:relative;
+  z-index:2;
+  filter:drop-shadow(0 30px 30px rgba(0,0,0,.55));
+}
+
+.vehicle:after{
+  content:"";
+  position:absolute;
+  bottom:8%;
+  left:10%;
+  width:80%;
+  height:50px;
+  background:rgba(0,0,0,.8);
+  filter:blur(25px);
+  border-radius:50%;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* TRUST BAR */
+
+.trust{
+  border-top:1px solid #1c2229;
+  border-bottom:1px solid #1c2229;
+  background:#0c1015;
+}
+
+.trust-inner{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.trust-item{
+  padding:28px 20px;
+  text-align:center;
+  border-right:1px solid #1c2229;
+}
+
+.trust-item:last-child{border:none}
+
+.trust-item strong{
+  display:block;
+  font-family:'Montserrat';
+  color:white;
+  font-size:18px;
+}
+
+.trust-item span{
+  color:#737e89;
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:110px 6%;
+}
+
+.container{
+  max-width:1250px;
+  margin:auto;
+}
+
+.section-tag{
+  color:var(--orange);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+
+.section-title{
+  font-family:'Montserrat';
+  font-size:clamp(34px,4vw,55px);
+  line-height:1.05;
+  letter-spacing:-2px;
+}
+
+.section-title span{color:var(--orange)}
+
+.section-sub{
+  color:#8f99a5;
+  max-width:620px;
+  margin-top:17px;
+  line-height:1.8;
+}
+
+/* VEHICLE SHOWCASE */
+
+.showcase{
+  background:#0d1116;
+}
+
+.showcase-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:65px;
+  align-items:center;
+}
+
+.product-img{
+  position:relative;
+  border-radius:25px;
+  overflow:hidden;
+  min-height:500px;
+  background:
+  radial-gradient(circle at center,rgba(255,107,0,.17),transparent 45%),
+  #080b0f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.product-img img{
+  width:100%;
+  height:100%;
+  max-height:560px;
+  object-fit:contain;
+  padding:15px;
+}
+
+.product-badge{
+  position:absolute;
+  left:22px;
+  top:22px;
+  background:rgba(0,0,0,.72);
+  backdrop-filter:blur(10px);
+  padding:11px 17px;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:700;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.product-info h2{
+  font-family:'Montserrat';
+  font-size:48px;
+  line-height:1;
+  margin:12px 0 20px;
+}
+
+.product-info h2 span{color:var(--orange)}
+
+.product-info>p{
+  color:#929ca7;
+  line-height:1.8;
+}
+
+.specs{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:30px 0;
+}
+
+.spec{
+  background:#141a20;
+  border:1px solid #222a33;
+  padding:18px;
+  border-radius:10px;
+}
+
+.spec b{
+  display:block;
+  font-size:14px;
+}
+
+.spec small{color:#78838e}
+
+/* SERVICES */
+
+.services{
+  background:#080b0f;
+}
+
+.service-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:50px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  min-height:250px;
+  padding:30px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#12181e,#0d1116);
+  border:1px solid #20272f;
+  position:relative;
+  overflow:hidden;
+  transition:.35s;
+}
+
+.card:before{
+  content:"";
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:var(--orange);
+  filter:blur(70px);
+  position:absolute;
+  right:-20px;
+  top:-20px;
+  opacity:0;
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#4c3322;
+}
+
+.card:hover:before{opacity:.5}
+
+.number{
+  color:#4d5660;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+.card-icon{
+  font-size:35px;
+  margin:32px 0 20px;
+}
+
+.card h3{
+  font-size:18px;
+  margin-bottom:9px;
+}
+
+.card p{
+  font-size:13px;
+  color:#7e8995;
+  line-height:1.7;
+}
+
+/* OWNER */
+
+.owner-section{
+  background:#f5f5f3;
+  color:#101318;
+}
+
+.owner-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:75px;
+  align-items:center;
+}
+
+.owner-img-wrap{
+  position:relative;
+}
+
+.owner-img-wrap:before{
+  content:"";
+  position:absolute;
+  width:80%;
+  height:90%;
+  background:var(--orange);
+  left:-15px;
+  bottom:-15px;
+  border-radius:20px;
+}
+
+.owner-img{
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  object-position:center;
+  position:relative;
+  border-radius:20px;
+  filter:grayscale(10%);
+}
+
+.owner-content .section-title{
+  color:#101318;
+}
+
+.owner-content p{
+  color:#606a73;
+  line-height:1.9;
+  margin:22px 0;
+}
+
+.owner-name{
+  margin-top:30px;
+  padding-top:20px;
+  border-top:1px solid #d7d7d4;
+}
+
+.owner-name strong{
+  display:block;
+  font-family:'Montserrat';
+  font-size:21px;
+}
+
+.owner-name span{
+  color:var(--orange);
+  font-size:12px;
+  font-weight:700;
+}
+
+/* WHY */
+
+.why{
+  background:#0c1015;
+}
+
+.why-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.why-card{
+  border-top:1px solid #333b44;
+  padding:25px 5px;
+}
+
+.why-card b{
+  color:var(--orange);
+  font-size:32px;
+}
+
+.why-card h3{
+  margin:15px 0 8px;
+  font-size:16px;
+}
+
+.why-card p{
+  color:#78838e;
+  font-size:13px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:
+  radial-gradient(circle at 80% 40%,rgba(255,107,0,.13),transparent 28%),
+  #080b0f;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+}
+
+.contact-info{
+  margin-top:35px;
+}
+
+.info{
+  padding:18px 0;
+  border-bottom:1px solid #252b32;
+}
+
+.info small{
+  display:block;
+  color:var(--orange);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:5px;
+}
+
+.info span{
+  color:#dce1e5;
+}
+
+.form{
+  background:#11171d;
+  border:1px solid #242c34;
+  padding:35px;
+  border-radius:18px;
+}
+
+.form h3{
+  font-family:'Montserrat';
+  margin-bottom:25px;
+  font-size:24px;
+}
+
+.form input,.form textarea{
+  width:100%;
+  border:none;
+  border-bottom:1px solid #35404a;
+  background:transparent;
+  padding:16px 5px;
+  margin-bottom:12px;
+  color:white;
+  outline:none;
+  font-family:inherit;
+}
+
+.form textarea{
+  min-height:100px;
+  resize:none;
+}
+
+.form button{
+  width:100%;
+  border:none;
+  margin-top:18px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+  padding:40px 6%;
+  background:#05070a;
+  border-top:1px solid #181c21;
+}
+
+.footer-inner{
+  max-width:1250px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+}
+
+.footer-brand{
+  font-family:'Montserrat';
+  font-weight:900;
+}
+
+footer p{
+  color:#59636e;
+  font-size:11px;
+}
+
+/* FLOAT */
+
+.float-buttons{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+.call{background:var(--orange)}
+.wa{background:#25D366}
+
+/* ANIMATION */
+
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.8s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  nav{padding:15px 5%}
+  .brand{font-size:16px}
+  .navlinks a:not(.navbtn){display:none}
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    padding:130px 5% 60px;
+  }
+
+  .hero h1{
+    font-size:50px;
+    letter-spacing:-3px;
+  }
+
+  .hero p{font-size:14px}
+
+  .vehicle{
+    margin-top:15px;
+  }
+
+  .trust-inner{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trust-item:nth-child(2){
+    border-right:none;
+  }
+
+  section{padding:80px 5%}
+
+  .showcase-grid,
+  .owner-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-img{min-height:350px}
+
+  .product-info h2{font-size:38px}
+
+  .service-head{
+    display:block;
+  }
+
+  .cards{grid-template-columns:1fr}
+
+  .owner-img{
+    height:420px;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-inner{
+    display:block;
+  }
+
+  footer p{margin-top:12px}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">
+    AMARJEET ELECTRICALS
+    <span>E-RICKSHAW CENTRE</span>
+  </div>
+
+  <div class="navlinks">
+    <a href="#vehicle">Vehicle</a>
+    <a href="#services">Services</a>
+    <a href="#dealer">Dealer</a>
+    <a href="#contact" class="navbtn">Enquire Now</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+<div class="hero-grid">
+
+  <div>
+    <div class="eyebrow">ELECTRIC MOBILITY • SALES & SERVICE</div>
+
+    <h1>
+      MOVE<br>
+      <span>SMARTER.</span><br>
+      EARN BETTER.
+    </h1>
+
+    <p>
+      Welcome to <b style="color:white">Amarjeet Electricals – E-Rickshaw Centre.</b>
+      Your destination for Dev Rocket E-Rickshaw sales, service,
+      repairs and dependable after-sales support.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#vehicle" class="primary">EXPLORE E-RICKSHAW →</a>
+      <a href="#contact" class="secondary">BOOK AN ENQUIRY</a>
+    </div>
+  </div>
+
+  <div class="vehicle">
+    <img src="rickshaw.jpg" alt="Dev Rocket E-Rickshaw">
+  </div>
+
+</div>
+</div>
+
+
+<!-- TRUST -->
+
+<div class="trust">
+<div class="trust-inner">
+
+  <div class="trust-item">
+    <strong>DEV ROCKET</strong>
+    <span>E-RICKSHAW</span>
+  </div>
+
+  <div class="trust-item">
+    <strong>SALES</strong>
+    <span>VEHICLE ENQUIRY</span>
+  </div>
+
+  <div class="trust-item">
+    <strong>SERVICE</strong>
+    <span>REPAIR & MAINTENANCE</span>
+  </div>
+
+  <div class="trust-item">
+    <strong>SUPPORT</strong>
+    <span>SPARE PARTS</span>
+  </div>
+
+</div>
+</div>
+
+
+<!-- VEHICLE -->
+
+<section class="showcase" id="vehicle">
+<div class="container showcase-grid">
+
+  <div class="product-img reveal">
+
+    <div class="product-badge">
+      DEV ROCKET • ELECTRIC
+    </div>
+
+    <img src="rickshaw.jpg" alt="Dev Rocket E-Rickshaw">
+
+  </div>
+
+  <div class="product-info reveal">
+
+    <div class="section-tag">BUILT FOR THE ROAD</div>
+
+    <h2>
+      DEV ROCKET<br>
+      <span>E-RICKSHAW</span>
+    </h2>
+
+    <p>
+      An electric mobility solution designed for everyday passenger
+      transportation and commercial use. Visit Amarjeet Electricals
+      to explore the vehicle and get complete sales and service support.
+    </p>
+
+    <div class="specs">
+
+      <div class="spec">
+        <b>Electric Drive</b>
+        <small>Efficient mobility</small>
+      </div>
+
+      <div class="spec">
+        <b>Comfort</b>
+        <small>Passenger focused</small>
+      </div>
+
+      <div class="spec">
+        <b>Service Support</b>
+        <small>Repair assistance</small>
+      </div>
+
+      <div class="spec">
+        <b>Spare Parts</b>
+        <small>Parts support</small>
+      </div>
+
+    </div>
+
+    <a href="#contact" class="primary">
+      GET DETAILS →
+    </a>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+<div class="container">
+
+  <div class="service-head reveal">
+
+    <div>
+      <div class="section-tag">COMPLETE SUPPORT</div>
+      <h2 class="section-title">
+        More Than A <span>Showroom.</span>
+      </h2>
+    </div>
+
+    <p class="section-sub">
+      From buying your E-Rickshaw to keeping it running,
+      get essential support at one place.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="card reveal">
+      <div class="number">01 / SALES</div>
+      <div class="card-icon">🛺</div>
+      <h3>E-Rickshaw Sales</h3>
+      <p>Explore Dev Rocket E-Rickshaw and get assistance for your vehicle enquiry.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="number">02 / SERVICE</div>
+      <div class="card-icon">🔧</div>
+      <h3>Repair & Service</h3>
+      <p>Professional maintenance and repair support for your E-Rickshaw.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="number">03 / ELECTRICAL</div>
+      <div class="card-icon">⚡</div>
+      <h3>Electrical Work</h3>
+      <p>Electrical diagnosis and support for essential vehicle systems.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="number">04 / BATTERY</div>
+      <div class="card-icon">🔋</div>
+      <h3>Battery Support</h3>
+      <p>Battery inspection and related electrical checking.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="number">05 / COMPONENTS</div>
+      <div class="card-icon">⚙️</div>
+      <h3>Motor & Controller</h3>
+      <p>Diagnosis and repair support for important E-Rickshaw components.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="number">06 / PARTS</div>
+      <div class="card-icon">🧰</div>
+      <h3>Spare Parts</h3>
+      <p>Essential E-Rickshaw parts for service and maintenance requirements.</p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- DEALER -->
+
+<section class="owner-section" id="dealer">
+<div class="container owner-grid">
+
+  <div class="owner-img-wrap reveal">
+    <img src="owner.jpg" class="owner-img" alt="Dealer">
+  </div>
+
+  <div class="owner-content reveal">
+
+    <div class="section-tag">YOUR LOCAL E-RICKSHAW CENTRE</div>
+
+    <h2 class="section-title">
+      Service Built On<br>
+      <span>Trust.</span>
+    </h2>
+
+    <p>
+      Amarjeet Electricals – E-Rickshaw Centre is committed to
+      providing customers with dependable vehicle sales and
+      after-sales assistance.
+    </p>
+
+    <p>
+      Whether you're looking for an E-Rickshaw, need regular
+      maintenance, repair work or spare parts, our goal is to
+      provide straightforward and reliable support.
+    </p>
+
+    <div class="owner-name">
+      <strong>Gurpinder Guri</strong>
+      <span>AMARJEET ELECTRICALS • E-RICKSHAW CENTRE</span>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- WHY -->
+
+<section class="why">
+<div class="container">
+
+  <div class="section-tag">WHY AMARJEET ELECTRICALS</div>
+
+  <h2 class="section-title">
+    Everything Your E-Rickshaw<br>
+    <span>Needs.</span>
+  </h2>
+
+  <div class="why-grid">
+
+    <div class="why-card reveal">
+      <b>01</b>
+      <h3>Vehicle Sales</h3>
+      <p>Get assistance while choosing your E-Rickshaw.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <b>02</b>
+      <h3>After-Sales Support</h3>
+      <p>Support doesn't end after purchasing your vehicle.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <b>03</b>
+      <h3>Repair & Maintenance</h3>
+      <p>Service support to keep your vehicle road-ready.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <b>04</b>
+      <h3>Customer Assistance</h3>
+      <p>Talk directly with us for sales and service enquiries.</p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+<div class="container contact-grid">
+
+  <div class="reveal">
+
+    <div class="section-tag">CONTACT US</div>
+
+    <h2 class="section-title">
+      Ready To Go<br>
+      <span>Electric?</span>
+    </h2>
+
+    <p class="section-sub">
+      Contact Amarjeet Electricals for E-Rickshaw sales,
+      servicing, repairs and spare parts.
+    </p>
+
+    <div class="contact-info">
+
+      <div class="info">
+        <small>BUSINESS</small>
+        <span>Amarjeet Electricals – E-Rickshaw Centre</span>
+      </div>
+
+      <div class="info">
+        <small>PHONE</small>
+        <span>+91 XXXXX XXXXX</span>
+      </div>
+
+      <div class="info">
+        <small>ADDRESS</small>
+        <span>Your complete showroom address</span>
+      </div>
+
+      <div class="info">
+        <small>WORKING HOURS</small>
+        <span>Add showroom opening hours</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="form reveal">
+
+    <h3>Request a Call Back</h3>
+
+    <input id="name" type="text" placeholder="Your Name">
+
+    <input id="phone" type="tel" placeholder="Mobile Number">
+
+    <textarea id="message" placeholder="How can we help you?"></textarea>
+
+    <button onclick="sendWhatsApp()" class="primary">
+      SEND ENQUIRY ON WHATSAPP →
+    </button>
+
+  </div>
+
+</div>
+</section>
+
+
+<footer>
+<div class="footer-inner">
+
+  <div class="footer-brand">
+    AMARJEET ELECTRICALS
+  </div>
+
+  <p>
+    E-Rickshaw Sales • Service • Repair • Spare Parts<br>
+    © 2026 Amarjeet Electricals. All Rights Reserved.
+  </p>
+
+</div>
+</footer>
+
+
+<div class="float-buttons">
+
+  <a href="tel:+91XXXXXXXXXX" class="float call">☎</a>
+
+  <a href="https://wa.me/91XXXXXXXXXX"
+     class="float wa">✆</a>
+
+</div>
+
+
+<script>
+
+function sendWhatsApp(){
+
+  let name=document.getElementById("name").value;
+  let phone=document.getElementById("phone").value;
+  let message=document.getElementById("message").value;
+
+  let text=
+  "Hello Amarjeet Electricals,%0A%0A"+
+  "Name: "+encodeURIComponent(name)+"%0A"+
+  "Mobile: "+encodeURIComponent(phone)+"%0A"+
+  "Enquiry: "+encodeURIComponent(message);
+
+  window.open(
+    "https://wa.me/91XXXXXXXXXX?text="+text,
+    "_blank"
+  );
+}
+
+
+/* Scroll animation */
+
+const elements=document.querySelectorAll(".reveal");
+
+function reveal(){
+
+  elements.forEach(el=>{
+
+    const position=el.getBoundingClientRect().top;
+
+    if(position < window.innerHeight-80){
+      el.classList.add("active");
+    }
+
+  });
+
+}
+
+window.addEventListener("scroll",reveal);
+window.addEventListener("load",reveal);
+
+</script>
+
+</body>
+</html>
